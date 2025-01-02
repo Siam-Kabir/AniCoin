@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[#1b263b] shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-[#1b263b]/95 backdrop-blur-md shadow-lg border-b border-pink-500/10' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -45,10 +45,11 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Mobile menu */}
       <div
-        className={`transition-all duration-300 ${
+        className={`md:hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-        } overflow-hidden bg-[#1b263b]`}
+        } overflow-hidden bg-[#1b263b]/95 backdrop-blur-md border-t border-pink-500/10`}
       >
         <div className="px-4 pt-2 pb-3 space-y-3">
           <NavLinks 
