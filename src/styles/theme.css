@@ -1,0 +1,18 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #0D1B2A;
+  --color-primary-light: #1B263B;
+  --color-secondary: #415A77;
+  --color-accent: #778DA9;
+  --color-light: #E0E1DD;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  --gradient-accent: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  
+  /* Shadows */
+  --shadow-glow: 0 0 15px rgba(119, 141, 169, 0.3);
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
