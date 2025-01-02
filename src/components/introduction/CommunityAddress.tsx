@@ -7,21 +7,20 @@ export function CommunityAddress() {
   const { copied, copyToClipboard } = useCopyToClipboard();
 
   return (
-    <div className="p-4 sm:p-6 bg-[#0d1b2a]/50 rounded-xl border border-pink-500/20 backdrop-blur-sm">
-      <h3 className="text-lg font-semibold text-white mb-4 text-center sm:text-left">
+    <div className="p-6 bg-[#0d1b2a]/50 rounded-xl border border-pink-500/20 backdrop-blur-sm">
+      <h3 className="text-xl font-semibold text-white mb-4">
         Community Address
       </h3>
       
-      <div className="flex flex-col sm:flex-row items-center gap-3 bg-[#1b263b]/50 p-3 rounded-lg border border-accent/20 mb-4">
+      <div className="flex flex-col sm:flex-row items-center gap-3 bg-[#1b263b]/50 p-4 rounded-lg border border-accent/20 mb-6">
         <div className="w-full overflow-hidden">
-          <code className="text-accent text-xs sm:text-sm block w-full text-center sm:text-left truncate">
+          <code className="text-accent text-sm block w-full truncate">
             {communityAddress}
           </code>
         </div>
         <button
           onClick={() => copyToClipboard(communityAddress)}
-          className="flex items-center gap-2 px-3 py-1.5 hover:bg-accent/10 rounded-lg transition-colors flex-shrink-0 text-accent text-sm"
-          title="Copy address"
+          className="flex items-center gap-2 px-4 py-2 hover:bg-accent/10 rounded-lg transition-colors flex-shrink-0 text-accent"
         >
           {copied ? (
             <>
@@ -31,13 +30,13 @@ export function CommunityAddress() {
           ) : (
             <>
               <Copy className="w-4 h-4" />
-              <span className="hidden sm:inline">Copy</span>
+              <span>Copy</span>
             </>
           )}
         </button>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+      <div className="grid grid-cols-2 gap-4">
         <a
           href="https://example.com/buy"
           target="_blank"

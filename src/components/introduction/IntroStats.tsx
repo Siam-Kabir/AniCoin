@@ -10,17 +10,17 @@ export function IntroStats() {
   ];
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-fit">
       {stats.map((stat) => (
         <Card 
           key={stat.label} 
-          className="p-4 bg-[#264452]/50 border-pink-500/20 text-center"
+          className="p-6 bg-[#264452]/50 border-pink-500/20 text-center hover:bg-[#264452]/70"
         >
-          <div className="space-y-1">
-            <div className="text-lg sm:text-2xl font-bold text-white mb-1">
+          <div className="space-y-2">
+            <div className="text-2xl sm:text-3xl font-bold text-white">
               {stat.value}
             </div>
-            <div className="text-xs sm:text-sm text-gray-300 whitespace-nowrap">
+            <div className="text-sm text-gray-300">
               {stat.label}
             </div>
           </div>
